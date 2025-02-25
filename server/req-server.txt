@@ -1,0 +1,12 @@
+aniso8601==10.0.0
+blinker==1.9.0
+click==8.1.8
+Flask==3.1.0
+Flask-RESTful==0.3.10
+itsdangerous==2.2.0
+Jinja2==3.1.5
+MarkupSafe==3.0.2
+peewee==3.17.9
+pytz==2025.1
+six==1.17.0
+Werkzeug==3.1.3

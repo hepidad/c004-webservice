@@ -1,0 +1,51 @@
+{% include 'header.html' %}
+  <body>
+
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{appType}} | Car Project</h1>
+                <h3>Demo:
+                        <a href="{{url_for('createcar')}}">Create</a>
+                        /
+                        <a href="{{url_for('readcar')}}">Read</a>
+                        /
+                        <a href="{{url_for('updatecar')}}">Update</a>
+                        /
+                        <a href="{{url_for('deletecar')}}">Delete</a>
+                        /
+                        <a href="{{url_for('searchcar')}}">Search</a>
+                </h3> 
+
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <h4>View Car Data</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Brand</th>
+                  <th scope="col">Model</th>
+                  <th scope="col">Price (USD)</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for data in rows %}  
+                <tr>
+                  <td>{{data.id}}</td>
+                  <td>{{data.carname}}</td>   
+                  <td>{{data.carbrand}}</td>
+                  <td>{{data.carmodel}}</td>
+                  <td>{{data.carprice}}</td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+        </div>
+    </div>
+  </body>
+{% include 'footer.html' %}

@@ -1,0 +1,29 @@
+{% include 'header.html' %}
+  <body>
+  <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{{appType}} | Car Project</h1>
+                <h3>Demo:
+                        <a href="{{url_for('createcar')}}">Create</a>
+                        /
+                        <a href="{{url_for('readcar')}}">Read</a>
+                        /
+                        <a href="{{url_for('updatecar')}}">Update</a>
+                        /
+                        <a href="{{url_for('deletecar')}}">Delete</a>
+                        /
+                        <a href="{{url_for('searchcar')}}">Search</a>
+                </h3> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Update Car Data</h4>
+                <p>Silahkan diteruskan ... </p>
+            </div>
+            
+        </div>
+  </div>
+  </body>
+{% include 'footer.html' %}

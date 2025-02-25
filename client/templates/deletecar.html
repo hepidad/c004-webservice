@@ -1,0 +1,41 @@
+{% include 'header.html' %}
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{{appType}}  | Car Project</h1>
+                <h3>Demo:
+                        <a href="{{url_for('createcar')}}">Create</a>
+                        /
+                        <a href="{{url_for('readcar')}}">Read</a>
+                        /
+                        <a href="{{url_for('updatecar')}}">Update</a>
+                        /
+                        <a href="{{url_for('deletecar')}}">Delete</a>
+                        /
+                        <a href="{{url_for('searchcar')}}">Search</a>
+                </h3> 
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Delete Car Data</h4>
+                <form role="form" action="{{url_for('deletecarsave')}}" method="POST" >
+                    <div class="form-group">
+                        <label for="isianName">
+                            Name 
+                        </label>
+                        <input type="text" class="form-control" id="carName" name="carName">
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Delete
+                    </button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <script src="../static/js/bootstrap.min.js"></script>
+  </body>
+{% include 'footer.html' %}
